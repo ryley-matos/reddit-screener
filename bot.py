@@ -8,7 +8,7 @@ load_dotenv()
 if __name__ == '__main__':
     all_reddit = reddit.subreddit("all")
     for comment in all_reddit.stream.comments():
-        if ('!ScreenshotComment' in comment.body):
+        if ('!Screenshot' in comment.body):
             create_comment_image(comment)
             
 
