@@ -6,7 +6,6 @@ import imgkit
 import jinja2
 import random
 from dotenv import load_dotenv
-from jinja2 import Template
 
 load_dotenv()
 
