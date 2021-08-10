@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+    html_test_server:
+      build:
+        context: .
+        dockerfile: Dockerfile-html_test_server
+    bot:
+      restart: always
+      build:
+        context: .
+        dockerfile: Dockerfile-bot
