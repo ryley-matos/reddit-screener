@@ -30,7 +30,8 @@ def get_praw_kwargs():
         ('REDDIT_CLIENT_ID', 'client_id'),
         ('REDDIT_CLIENT_SECRET', 'client_secret'),
         ('REDDIT_USERNAME', 'username'),
-        ('REDDIT_PASSWORD', 'password')
+        ('REDDIT_PASSWORD', 'password'),
+        ('REDDIT_USERAGENT', 'user_agent')
     ]
     return {
         praw_key: os.environ[env_key] for (env_key, praw_key) in praw_key_tups
@@ -38,8 +39,7 @@ def get_praw_kwargs():
 
 
 reddit = praw.Reddit(
-    **get_praw_kwargs(),
-    user_agent='reddit-share'
+    **get_praw_kwargs()
 )
 
 
